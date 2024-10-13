@@ -218,11 +218,45 @@ export const MobileNavLogo = styled(LinkR)`
 `;
 
 export const OtherProfile = styled.img`
-    height: 40px;
-    width: fit-content;
-    border-radius: 10px;
-    &:hover{
-        cursor: pointer;
-        opacity: 0.8;
-    }
+  border-radius: 10px;
+  background-color : ${({ theme }) => theme.primary};
+  border: 1.8px solid ${({ theme }) => theme.primary};
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  border-radius: 20px;
+  color: ${({ theme }) => theme.primary};
+  cursor: pointer;
+  padding: 0 15px 0 15px;
+  transition: all 0.6s ease-in-out;
+  :hover {
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.white};     
+  }
+  @media screen and (max-width: 768px) { 
+    font-size: 14px;
+  }
 `
+
+export const OtherProfileLink = styled.a`
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  background-color: ${({ theme }) => theme.primary};
+  border: 1.8px solid ${({ theme }) => theme.primary};
+  justify-content: center;
+  height: 70%;
+  border-radius: 20px;
+  color: ${({ theme }) => theme.primary};
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+  :hover {
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.white};
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+`;

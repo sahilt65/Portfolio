@@ -1,10 +1,11 @@
 import React from 'react'
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink, OtherProfile} from './NavbarStyledComponent'
+import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink, OtherProfile, OtherProfileLink} from './NavbarStyledComponent'
 import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { Close, CloseRounded } from '@mui/icons-material';
 import { useTheme } from 'styled-components';
+import LeetCode from '../../images/leetcode-logo.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -31,7 +32,9 @@ const Navbar = () => {
         </NavItems>
         <ButtonContainer>
           <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
-          <OtherProfile src = "https://cdn.iconscout.com/icon/free/png-256/free-leetcode-3521542-2944960.png?f=webp" style = {{"marginLeft":"20px"}}></OtherProfile>
+          <OtherProfileLink href="https://leetcode.com/u/sahil_65/" target="_blank" rel="noopener noreferrer">
+            <OtherProfile src={LeetCode} />
+          </OtherProfileLink>
 
         </ButtonContainer>
         {
